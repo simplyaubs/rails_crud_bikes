@@ -8,14 +8,6 @@
     <%= f.text_field :color %>
   </p>
   <p>
-    <%= f.submit 'Add bike' %>
+    <%= f.submit 'Update bike' %>
   </p>
-<% end %>
-
-<% @bikes.each do |bike| %>
-<ul>
-  <li>
-    <%= link_to "#{bike.brand}", bike_path(bike) %>, <%= bike.color %>
-  </li>
-</ul>
 <% end %>
