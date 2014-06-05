@@ -29,6 +29,12 @@ class BikesController < ApplicationController
     redirect_to bike_path(@bike)
   end
 
+  def destroy
+    @bike = Bike.find(params[:id]).delete
+
+    redirect_to bikes_path
+  end
+
   private
   def bike_params
     params.require(:bike).permit(:brand, :color)
